@@ -7,19 +7,12 @@ import User from "./models/User.js";
 import Profile from "./models/Profile.js";
 import Cart from "./models/Cart.js";
 import Product from "./models/Product.js";
-import userRoutes from "./routes/userRoutes.js"
-import userOrderRoutes from "./routes/userOrderRoutes.js";
-import cartRoutes from "./routes/cartRoutes.js";
-import cartProductRoutes from "./routes/cartProductRoutes.js";
-
+import All_routes from "./utils/All_routes.js";
 const app = express();
 app.use(express.json());
 dotenv.config();
 console.log(process.env.DB_NAME, process.env.DB_USER, process.env.USER_PASS)
-app.use("/user", userRoutes);
-app.use("/orders", userOrderRoutes);
-app.use("/cart", cartRoutes);
-app.use("/cartprod", cartProductRoutes);
+app.use("/", All_routes);
 console.log("logg");
 
 userRealtionship();

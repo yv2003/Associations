@@ -6,13 +6,7 @@ import e from "express";
 const router = e.Router();
 
 //cart routers:;:
-router.post("/cart/add", addtoCart);
-router.delete("/cart/delete/:id", deleteFromCart);
-
-
-//cartProducts routers:;:
-router.post("/cart/addprod", addtoCartProducts);
-router.get("/cart/getAllCartProds", getAllProducts);
-router.delete("/cart/deleteprod/:id", deleteFromCartProducts);
+router.post("/add", addtoCart);
+router.delete("/delete/:id", deleteFromCart);
 
 export default router;
