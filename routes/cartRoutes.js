@@ -4,19 +4,6 @@ import { addtoCart, deleteFromCart } from "../controller/cartController.js";
 import { addtoCartProducts,deleteFromCartProducts, getAllProducts } from "../controller/cartProductController.js";
 import e from "express";
 const router = e.Router();
-router.post("/createUser", createUser);
-router.get("/fetchbyId/:id", fetchUserById);
-// router.get("/fetchByName/:name", fetchByName);
-router.put("/update/:id", updateProfile);
-
-
-// getUserOrderById.js routers
-
-router.get("/users/:id/orders", getUserOrders);
-router.post("/users/:id/orders", createOrder);
-router.get("/users/:userId/orders/:orderId", getUserOrderById);
-router.put("/update/users/:userId/orders/:orderId", updateOrder);
-router.delete("/users/:userId/orders/:orderId", deleteOrder);
 
 //cart routers:;:
 router.post("/cart/add", addtoCart);
